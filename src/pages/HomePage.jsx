@@ -6,13 +6,7 @@ import EditInput from "../components/EditInput";
 
 export default function HomePage() {
   const { data, clickHandler, deleteHandler, archieveHandler, setShowEdit } = useItems();
-  const [dataToEdit, setDataToEdit] = useState({
-    name: "",
-    startDate: "",
-    repeat: "",
-    timeOfDay: "",
-    goal: "",
-  })
+  const [dataToEdit, setDataToEdit] = useState({});
 
   return (
     <>
