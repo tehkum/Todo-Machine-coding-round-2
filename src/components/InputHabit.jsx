@@ -2,9 +2,7 @@ import "./InputHabit.css"
 import { useItems } from "../context/ItemContext";
 
 export default function InputHabit() {
-    const { showForm, setShowForm,  formData, setForm, submitHandler } = useItems()
-
-  
+    const { showForm, setShowForm, setForm, submitHandler } = useItems()
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -12,7 +10,6 @@ export default function InputHabit() {
       ...prevData,
       [name]: value,
     }));
-    console.log(formData);
   };
 
   return (
@@ -20,7 +17,9 @@ export default function InputHabit() {
         <h2>Add Habit Form</h2>
       <input type="text" name="name" placeholder="Name..." onChange={handleChange} className="form-name" />
       <label htmlFor="repeat">
+        Repeat
         <select id="repeat" name="repeat">
+            <option selected>none</option>
           <option>Daily</option>
           <option>Once a week</option>
           <option>Twice a week</option>
@@ -28,15 +27,19 @@ export default function InputHabit() {
         </select>
       </label>
       <label htmlFor="startDate">
+        Start Date
         <select id="startDate" name="startDate" onChange={handleChange}>
+            <option selected>none</option>
           <option>Today</option>
           <option>Tomorrow</option>
           <option>Day after tommorow</option>
           <option>Next week</option>
         </select>
       </label>
-      <label htmlFor="timeOfDat">
+      <label htmlFor="timeOfDay">
+        Time of Day
         <select id="timeOfDay" name="timeOfDay" onChange={handleChange}>
+            <option selected>none</option>
           <option>Anytime</option>
           <option>Morning</option>
           <option>Evening</option>
@@ -45,7 +48,9 @@ export default function InputHabit() {
         </select>
       </label>
       <label htmlFor="goal">
+        Goal
         <select id="goal" name="goal" onChange={handleChange}>
+            <option selected>none</option>
           <option>Once a day</option>
           <option>Twice a day</option>
           <option>Thrice a day</option>

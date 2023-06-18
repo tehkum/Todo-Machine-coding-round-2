@@ -31,10 +31,10 @@ export default function HomePage() {
               <img width="20" height="20" src="https://img.icons8.com/ios-glyphs/90/trash--v1.png" alt="trash--v1" onClick={()=>deleteHandler(habit.name)}/>
               </span>
             </div>
-            <p>{habit.repeat}</p>
-            <p>{habit.goal}</p>
-            <p>{habit.timeOfDay}</p>
-            <p>{habit.startDate}</p>
+            <p><b>Repeat: </b>{habit.repeat}</p>
+            <p><b>Goal: </b>{habit.goal}</p>
+            <p><b>Time of Day: </b>{habit.timeOfDay}</p>
+            <p><b>Start Date: </b>{habit.startDate}</p>
           </div>
         ))}
       </div>

@@ -51,7 +51,7 @@ export default function EditInput({
   return (
     <div
       className="input-habit-form"
-      style={{ display: showEdit ? "block" : "none" }}
+      style={{ display: showEdit ? "flex" : "none" }}
     >
       <h2>Edit Habit Form</h2>
       <input
@@ -64,12 +64,14 @@ export default function EditInput({
         className="form-name"
       />
       <label htmlFor="repeat">
+        Repeat
         <select
           id="repeat"
           name="repeat"
           value={editDetails.repeat}
           defaultValue={repeat}
         >
+            <option >none</option>
           <option>Daily</option>
           <option>Once a week</option>
           <option>Twice a week</option>
@@ -77,6 +79,7 @@ export default function EditInput({
         </select>
       </label>
       <label htmlFor="startDate">
+        Start date
         <select
           defaultValue={startDate}
           id="startDate"
@@ -84,6 +87,7 @@ export default function EditInput({
           onChange={handleChange}
           value={editDetails.startDate}
         >
+            <option >none</option>
           <option>Today</option>
           <option>Tomorrow</option>
           <option>Day after tomorrow</option>
@@ -91,6 +95,7 @@ export default function EditInput({
         </select>
       </label>
       <label htmlFor="timeOfDay">
+        Time of Day
         <select
           defaultValue={timeOfDay}
           id="timeOfDay"
@@ -98,6 +103,7 @@ export default function EditInput({
           onChange={handleChange}
           value={editDetails.timeOfDay}
         >
+            <option >none</option>
           <option>Anytime</option>
           <option>Morning</option>
           <option>Evening</option>
@@ -106,6 +112,7 @@ export default function EditInput({
         </select>
       </label>
       <label htmlFor="goal">
+        Goal
         <select
           id="goal"
           name="goal"
@@ -113,6 +120,7 @@ export default function EditInput({
           value={editDetails.goal}
           defaultValue={goal}
         >
+            <option>none</option>
           <option>Once a day</option>
           <option>Twice a day</option>
           <option>Thrice a day</option>
@@ -125,3 +133,6 @@ export default function EditInput({
     </div>
   );
 }
+
+
+
