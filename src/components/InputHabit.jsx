@@ -57,7 +57,9 @@ export default function InputHabit() {
         </select>
       </label>
       <div className="form-btn">
-      <button onClick={submitHandler}>Add habit</button>
+      <button onClick={()=>{
+        setShowForm(false)
+        submitHandler();}}>Add habit</button>
       <button onClick={()=>setShowForm(false)}>Cancel</button></div>
     </div>
   );

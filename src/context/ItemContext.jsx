@@ -17,6 +17,10 @@ export function ItemContext({children}){
       });
   const [showEdit, setShowEdit] = useState(false)
 
+      const archieveDeleteHandler = (name) => {
+        setArchieveData(archieveData.filter(item=> !(item.name === name)))
+      }
+
 
 
       const archieveHandler = (name) => {
@@ -41,7 +45,7 @@ export function ItemContext({children}){
         setData(HabitData);
     },[])
 
-    return <manageItem.Provider value={{data, showEdit, setShowEdit, setData, clickHandler, archieveData, archieveHandler, setShowForm, formData, setForm, submitHandler, deleteHandler, showForm}}>{children}</manageItem.Provider>
+    return <manageItem.Provider value={{data, showEdit, setShowEdit, setData, clickHandler, archieveDeleteHandler, archieveData, archieveHandler, setShowForm, formData, setForm, submitHandler, deleteHandler, showForm}}>{children}</manageItem.Provider>
 }
 
 export const useItems = () => useContext(manageItem);

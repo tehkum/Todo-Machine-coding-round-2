@@ -71,7 +71,7 @@ export default function EditInput({
           value={editDetails.repeat}
           defaultValue={repeat}
         >
-            <option >none</option>
+        <option >none</option>
           <option>Daily</option>
           <option>Once a week</option>
           <option>Twice a week</option>
@@ -127,7 +127,9 @@ export default function EditInput({
         </select>
       </label>
       <div className="form-btn">
-        <button onClick={() => handleEdit(name)}>Edit habit</button>
+        <button onClick={() => {
+            setShowEdit(false)
+            handleEdit(name)}}>Edit habit</button>
         <button onClick={() => setShowEdit(false)}>Cancel</button>
       </div>
     </div>
