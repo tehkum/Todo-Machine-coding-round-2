@@ -1,0 +1,18 @@
+nav {
+    background-color: rgba(38,38,38,1);
+    /* position: fixed;
+    top: 0; */
+    color: white;
+    padding: 0 1rem;
+}
+
+.pages-nav {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 0.5rem ;
+}
+
+.pages-nav p {
+    color: white;
+    text-decoration: none;
+}
